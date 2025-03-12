@@ -5,4 +5,5 @@ In the project files, you’ll find a list of 10 Oscar-winning movies and their 
 
 Directions
 1) Open file in preferred editor.
-2) Run all.
+2) Setup environment and install required packages from 'requirements.txt'.
+3) Run all.
