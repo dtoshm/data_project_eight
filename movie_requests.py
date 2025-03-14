@@ -33,16 +33,8 @@ def save_to_csv(user_csv, user_movies):
                 runtime = int(movie['Runtime'].replace(' min', ''))
                 genre = movie['Genre']
                 awards_str = movie['Awards']
-                wins, nominations = 0, 0
-                pattern = r'(\d+)\s*(?:win|wins)|(\d+)\s*(?:nomination|nominations)'
-                for match in re.findall(pattern, awards_str):
-                    if match[0]:
-                        wins += int(match[0])
-                    if match[1]:
-                        nominations += int(match[1])
-                # awards_data = [int(word) for word in movie['Awards'].split() if word.isdigit()]
-                # award_wins = int(awards_data[1])
-                # award_nominations = int(awards_data[2])
+                wins = sum(int(num) for num in re.findall(r'(\d+)\s*win', awards_str))
+                nominations = sum(int(num) for num in re.findall(r'(\d+)\s*nomination', awards_str))
                 box_office = int(movie['BoxOffice'].replace('$', '').replace(',', ''))
                 info = [title, runtime, genre, wins, nominations, box_office]
                 writer.writerow(info)
