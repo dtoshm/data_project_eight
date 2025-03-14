@@ -1,16 +1,16 @@
-Movie Title,Runtime,Genre,Award Wins,Award Nominations,Box Office
-Parasite,132,"Drama, Thriller",316,266,53369749
-Green Book,130,"Biography, Comedy, Drama",58,123,85080171
-The Shape of Water,123,"Drama, Fantasy, Romance",138,350,63859435
-Moonlight,111,Drama,235,310,27854932
-Spotlight,129,"Biography, Crime, Drama",124,144,45055776
-Birdman or (The Unexpected Virtue of Ignorance),119,"Comedy, Drama",192,295,42340598
-12 Years a Slave,134,"Biography, Drama, History",244,337,56671993
-Argo,120,"Biography, Drama, History",96,156,136025503
-The Artist,100,"Comedy, Drama, Romance",162,204,44671682
-The King's Speech,118,"Biography, Drama, History",109,206,138797449
-Monty Python and the Holy Grail,91,"Adventure, Comedy, Fantasy",2,2,2562392
-Monty Python's Life of Brian,94,Comedy,0,0,20206622
-Monty Python's the Meaning of Life,107,"Comedy, Musical",1,2,14929552
-A Fish Called Wanda,108,"Comedy, Crime",9,22,62493712
-The Hitchhiker's Guide to the Galaxy,109,"Adventure, Comedy, Sci-Fi",1,10,51085416
+Movie Title,Runtime,Genre,Award Wins,Award Nominations,Box Office,Director,Language,Plot
+Parasite,132,"Drama, Thriller",316,266,53369749,Bong Joon Ho,"Korean, English",Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.
+Green Book,130,"Biography, Comedy, Drama",58,123,85080171,Peter Farrelly,"English, Italian, Russian, German",A working-class Italian-American bouncer becomes the driver for an African-American classical pianist on a tour of venues through the 1960s American South.
+The Shape of Water,123,"Drama, Fantasy, Romance",138,350,63859435,Guillermo del Toro,"English, American Sign , Russian, French","At a top secret research facility in the 1960s, a lonely janitor forms a unique relationship with an amphibious creature that is being held in captivity."
+Moonlight,111,Drama,235,310,27854932,Barry Jenkins,English,"A young African-American man grapples with his identity and sexuality while experiencing the everyday struggles of childhood, adolescence, and burgeoning adulthood."
+Spotlight,129,"Biography, Crime, Drama",124,144,45055776,Tom McCarthy,English,"The true story of how the Boston Globe uncovered the massive scandal of child molestation and cover-up within the local Catholic Archdiocese, shaking the entire Catholic Church to its core."
+Birdman or (The Unexpected Virtue of Ignorance),119,"Comedy, Drama",192,295,42340598,Alejandro G. Iñárritu,English,"A washed-up superhero actor attempts to revive his fading career by writing, directing, and starring in a Broadway production."
+12 Years a Slave,134,"Biography, Drama, History",244,337,56671993,Steve McQueen,English,"In the antebellum United States, Solomon Northup, a free black man from upstate New York, is abducted and sold into slavery."
+Argo,120,"Biography, Drama, History",96,156,136025503,Ben Affleck,"English, Persian, German, Arabic","Acting under the cover of a Hollywood producer scouting a location for a science fiction film, a CIA agent launches a dangerous operation to rescue six Americans in Tehran during the U.S. hostage crisis in Iran in 1979."
+The Artist,100,"Comedy, Drama, Romance",162,204,44671682,Michel Hazanavicius,"English, French","When George, a silent movie superstar, meets Peppy Miller, a dancer, sparks fly between the two. However, after the introduction of talking pictures, their fortunes change, affecting their dynamic."
+The King's Speech,118,"Biography, Drama, History",109,206,138797449,Tom Hooper,English,"The story of King George VI, his unexpected ascension to the throne of the British Empire in 1936, and the speech therapist who helped the unsure monarch overcome his stammer."
+Monty Python and the Holy Grail,91,"Adventure, Comedy, Fantasy",2,2,2562392,"Terry Gilliam, Terry Jones","English, French, Latin, Swedish","King Arthur and his Knights of the Round Table embark on a surreal, low-budget search for the Holy Grail, encountering many, very silly obstacles."
+Monty Python's Life of Brian,94,Comedy,0,0,20206622,Terry Jones,"English, Latin","Born on the original Christmas in the stable next door to Jesus Christ, Brian of Nazareth spends his life being mistaken for a messiah."
+Monty Python's the Meaning of Life,107,"Comedy, Musical",1,2,14929552,Terry Jones,English,The comedy team takes a look at life in all of its stages in their own uniquely silly way.
+A Fish Called Wanda,108,"Comedy, Crime",9,22,62493712,"Charles Crichton, John Cleese","English, Italian, Russian, French","In London, four very different people team up on a jewel heist, then try to double-cross one another for the loot, complicated by their efforts to fool the very proper barrister Archibald Leach."
+The Hitchhiker's Guide to the Galaxy,109,"Adventure, Comedy, Sci-Fi",1,10,51085416,Garth Jennings,English,"Mere seconds before the Earth is to be demolished by an alien construction crew, journeyman Arthur Dent is swept off the planet by his friend Ford Prefect, a researcher penning a new edition of ""The Hitchhiker's Guide to the Galaxy."""

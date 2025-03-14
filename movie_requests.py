@@ -23,7 +23,7 @@ def res_omdb_data(user_csv):
 
 
 def save_to_csv(user_csv, user_movies):
-    header = ['Movie Title', 'Runtime', 'Genre', 'Award Wins', 'Award Nominations', 'Box Office']
+    header = ['Movie Title', 'Runtime', 'Genre', 'Award Wins', 'Award Nominations', 'Box Office', 'Director', 'Language', 'Plot']
     with open(f'data/{user_csv}', 'w') as f:
         writer = csv.writer(f)
         writer.writerow(header)
@@ -36,7 +36,10 @@ def save_to_csv(user_csv, user_movies):
                 wins = sum(int(num) for num in re.findall(r'(\d+)\s*win', awards_str))
                 nominations = sum(int(num) for num in re.findall(r'(\d+)\s*nomination', awards_str))
                 box_office = int(movie['BoxOffice'].replace('$', '').replace(',', ''))
-                info = [title, runtime, genre, wins, nominations, box_office]
+                director = movie['Director']
+                language = movie['Language']
+                plot = movie['Plot']
+                info = [title, runtime, genre, wins, nominations, box_office, director, language, plot]
                 writer.writerow(info)
             except (KeyError, ValueError, IndexError) as err:
                 print(f"There was an error saving the movie '{movie['Title']}': {err}")
