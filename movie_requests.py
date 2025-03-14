@@ -1,6 +1,7 @@
-import requests
 from keys import api_key
+import requests
 import csv
+import re
 
 
 res = requests.get(f"http://www.omdbapi.com/?apikey={api_key}")
@@ -31,14 +32,19 @@ def save_to_csv(user_csv, user_movies):
                 title = movie['Title']
                 runtime = int(movie['Runtime'].replace(' min', ''))
                 genre = movie['Genre']
-                awards_data = [int(word) for word in movie['Awards'].split() if word.isdigit()]
-                award_wins = int(awards_data[1])
-                award_nominations = int(awards_data[2])
+                awards_str = movie['Awards']
+                wins, nominations = 0, 0
+                pattern = r'(\d+)\s*(?:win|wins)|(\d+)\s*(?:nomination|nominations)'
+                for match in re.findall(pattern, awards_str):
+                    if match[0]:
+                        wins += int(match[0])
+                    if match[1]:
+                        nominations += int(match[1])
+                # awards_data = [int(word) for word in movie['Awards'].split() if word.isdigit()]
+                # award_wins = int(awards_data[1])
+                # award_nominations = int(awards_data[2])
                 box_office = int(movie['BoxOffice'].replace('$', '').replace(',', ''))
-                info = [title, runtime, genre, award_wins, award_nominations, box_office]
+                info = [title, runtime, genre, wins, nominations, box_office]
                 writer.writerow(info)
             except (KeyError, ValueError, IndexError) as err:
                 print(f"There was an error saving the movie '{movie['Title']}': {err}")
-
-
-
