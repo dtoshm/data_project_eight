@@ -31,25 +31,34 @@ def res_omdb_data(user_csv):
 
 
 def save_to_csv(user_csv, user_movies):
-    header = ['Movie Title', 'Runtime', 'Genre', 'Award Wins', 'Award Nominations', 'Box Office', 'Director', 'Language', 'Plot']
+    """Saves movie data to a CSV file with specified fields.
+    
+    Args:
+        user_csv (str): Name of the output CSV file
+        user_movies (list): List of movie data dictionaries
+    
+    Returns:
+        None
+    """
+    header = ['Movie Title', 'Runtime', 'Genre', 'Award Wins', 'Award Nominations', 
+              'Box Office', 'Director', 'Language', 'Plot']
+    
     with open(f'data/{user_csv}', 'w') as f:
         writer = csv.writer(f)
         writer.writerow(header)
         for movie in user_movies:
             try:
-                title = movie['Title']
-                runtime = int(movie['Runtime'].replace(' min', ''))
-                genre = movie['Genre']
-                awards_str = movie['Awards']
-                wins = sum(int(num) for num in re.findall(r'(\d+)\s*win', awards_str))
-                nominations = sum(int(num) for num in re.findall(r'(\d+)\s*nomination', awards_str))
-                box_office = int(movie['BoxOffice'].replace('$', '').replace(',', ''))
-                director = movie['Director']
-                language = movie['Language']
-                plot = movie['Plot']
-                info = [title, runtime, genre, wins, nominations, box_office, director, language, plot]
-                writer.writerow(info)
-            except (KeyError, ValueError, IndexError) as err:
-                print(f"There was an error saving the movie '{movie['Title']}': {err}")
-
-res_omdb_data('python_winners.csv')
+                row = [
+                    movie['Title'],
+                    int(movie['Runtime'].replace(' min', '')),
+                    movie['Genre'],
+                    sum(int(num) for num in re.findall(r'(\d+)\s*win', movie['Awards'])),
+                    sum(int(num) for num in re.findall(r'(\d+)\s*nomination', movie['Awards'])),
+                    int(movie['BoxOffice'].replace('$', '').replace(',', '')),
+                    movie['Director'],
+                    movie['Language'],
+                    movie['Plot']
+                ]
+                writer.writerow(row)
+            except (KeyError, ValueError) as err:
+                print(f"Error saving '{movie['Title']}': {err}")
